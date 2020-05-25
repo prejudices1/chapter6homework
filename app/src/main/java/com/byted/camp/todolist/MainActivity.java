@@ -141,10 +141,10 @@ public class MainActivity extends AppCompatActivity {
             catch (ParseException e){
                 e.printStackTrace();
             }
-            String State = cursor.getString(cursor.getColumnIndex(TodoContract.todo.STATE));
-            int Int_State = Integer.valueOf(State).intValue();
-            State state = State.from(Int_State);
-            temp.setState(state);
+            String state1 = cursor.getString(cursor.getColumnIndex(TodoContract.todo.STATE));
+            int state2 = Integer.valueOf(state1).intValue();
+            State state3 = State.from(state2);
+            temp.setState(state3);
             result.add(temp);
         }
         cursor.close();
